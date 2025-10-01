@@ -9,7 +9,7 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 public class KafkaTopicConfig {
     @Value("${app.kafka.topic.meu-topico}")
-    private string topicName;
+    private String topicName;
 
     @Bean
     public NewTopic meuPirmiroTopico(){
