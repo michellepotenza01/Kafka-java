@@ -11,6 +11,7 @@ public class KafkaTopicConfig {
     @Value("${app.kafka.topic.meu-topico}")
     private String topicName;
 
+
     @Bean
     public NewTopic meuPirmiroTopico(){
         return TopicBuilder
