@@ -8,17 +8,15 @@ import org.springframework.kafka.config.TopicBuilder;
 
 @Configuration
 public class KafkaTopicConfig {
-    @Value("${app.kafka.topic.meu-topico}")
-    private String topicName;
+  @Value("${app.kafka.topic.meu-topico}")
+  private String topicName;
 
-
-    @Bean
-    public NewTopic meuPirmiroTopico(){
-        return TopicBuilder
-                .name(topicName)
-                .partitions(1)
-                .replicas(1)
-                .build();
-    }
+  @Bean
+  public NewTopic meuPrimeiroTopico(){
+    return TopicBuilder
+      .name(topicName)
+      .partitions(1)
+      .replicas(1)
+      .build();
+  }
 }
-
